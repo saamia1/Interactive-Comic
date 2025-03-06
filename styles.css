@@ -7,6 +7,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            font-family: 'Bubblegum Sans'
         }
         .index-body {
             background: url('Intro_bg.jpeg') no-repeat center center/cover;
@@ -32,6 +33,11 @@
             justify-content: space-evenly;
             gap: 20px;
         }
+        .top-buttons button{
+            font-family: 'Bubblegum Sans', cursive; 
+            font-size: 25px;
+
+        }
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -41,28 +47,42 @@
             background-color: lightblue;
             color: black;
         }
+        .start-button-container {
+            position: relative;
+            display: inline-block;
+        }
+        .start-text{
+            position: absolute;
+            top: 86%;
+            left: 53%;
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            pointer-events: none; 
+            transform: translate(-50%, -50%);
+        }
         .start-button {
-            margin-left: 50px;
-            margin-top: 300px;
+            margin-left: 60px;
+            margin-top: 400px;
             border-style: solid;
             box-sizing: border-box;
-            width: 80px;
+            width: 74px;
             height: 74px;
             border-width: 37px 0px 37px 74px;
-            border-color: transparent transparent transparent red;
-            background-color: white;
+            border-color: transparent transparent transparent #fa9a39;
+            background-color: transparent;
         }
         .start-button:hover {
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: transparent;
             color: black;
-            margin-left: 50px;
-            margin-top: 300px;
+            margin-left: 60px;
+            margin-top: 400px;
             border-style: solid;
             box-sizing: border-box;
             width: 80px;
             height: 74px;
             border-width: 37px 0px 37px 74px;
-            border-color: transparent transparent transparent black;
+            border-color: transparent transparent transparent #f58311;
         }
         button:hover {
             background-color: rgba(255, 255, 255, 0.7);
@@ -118,14 +138,15 @@
             border-radius: 50%;
             object-fit: cover;
         }
-        .panels{
-            
-        }
         .navigation-buttons {
             position: absolute;
             width: 100%;
             display: flex;
             justify-content: space-between;
+        }
+        .navigation-buttons button{
+            font-family: 'Bubblegum Sans', cursive; 
+            font-size: 18px;
         }
         .navigation-buttons .left-button {
             margin-left: 50px;
