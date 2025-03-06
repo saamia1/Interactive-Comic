@@ -90,53 +90,39 @@
             border-style: solid;
             box-sizing: border-box;
         }
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: lightblue;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .back-button:hover {
-            background-color: white;
-            color: black;
-        }
-        .team-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            background: rgba(0, 0, 0, 0.6);
+        .about-text {
+            color: lightblue;
+            font-size: 22px;
+            line-height: 1.5;
+            text-align: justify;
+            max-width: 600px;
+            height: auto;
             padding: 20px;
             border-radius: 10px;
-            color: white;
         }
         .team-container {
+            height: 60%;
+            width: 80%;
             display: flex;
+            align-items: center;
             justify-content: center;
             gap: 30px;
-            background: rgba(0, 0, 0, 0.6);
+            background: lightblue;
             padding: 20px;
             border-radius: 10px;
             color: white;
         }
         .team-member {
+            display: flex;
+            flex-direction: column; 
             text-align: center;
+            align-items: center;
+            justify-content: center;
         }
         .team-member img {
-            width: 100px;
-            height: 100px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
-            object-fit: cover;
         }
         .navigation-buttons {
             position: absolute;
@@ -153,4 +139,34 @@
         }
         .navigation-buttons .right-button {
             margin-right: 50px;
+        }
+
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Prevents interaction with snowflakes */
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            font-size: 24px; /* Adjust size */
+            color: white; /* Snowflake color */
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
         }
