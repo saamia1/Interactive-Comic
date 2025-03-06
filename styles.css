@@ -42,14 +42,33 @@
             color: black;
         }
         .start-button {
-            margin-top: -570px;
-            font-size: 20px;
+            margin-left: 50px;
+            margin-top: 300px;
+            border-style: solid;
+            box-sizing: border-box;
+            width: 80px;
+            height: 74px;
+            border-width: 37px 0px 37px 74px;
+            border-color: transparent transparent transparent red;
+            background-color: white;
+        }
+        .start-button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            margin-left: 50px;
+            margin-top: 300px;
+            border-style: solid;
+            box-sizing: border-box;
+            width: 80px;
+            height: 74px;
+            border-width: 37px 0px 37px 74px;
+            border-color: transparent transparent transparent black;
         }
         button:hover {
             background-color: rgba(255, 255, 255, 0.7);
             color: black;
-            border-color: black;
-            border-width: 2px;
+            border-style: solid;
+            box-sizing: border-box;
         }
         .back-button {
             position: absolute;
@@ -71,7 +90,7 @@
             background-color: white;
             color: black;
         }
-                .team-container {
+        .team-container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -81,21 +100,36 @@
             border-radius: 10px;
             color: white;
         }
-          .team-container {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        color: white;
-    }
-    .team-member {
-        text-align: center;
-    }
-    .team-member img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .panels{
+            
+        }
+        .navigation-buttons {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navigation-buttons .left-button {
+            margin-left: 50px;
+        }
+        .navigation-buttons .right-button {
+            margin-right: 50px;
+        }
