@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comic Start Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
 </head>
 <body class="index-body">
+    <div class="snowflakes">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+    </div>
+
     <div class="top-buttons">
         <button onclick="location.href='about.html'">About</button>
+        <button onclick="location.href='index.html'">Home</button>
         <button onclick="location.href='teams.html'">Our Team</button>
     </div>
-    <button class="start-button" onclick="location.href='start.html'">Start Comic</button>
+    <div class="start-button-container">
+        <button class="start-button" onclick="location.href='start.html'"></button>
+        <h2 class="start-text">Start</h2>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const snowContainer = document.querySelector(".snowflakes");
+
+        for (let i = 0; i < 30; i++) { // Adjust number of snowflakes
+            let snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.innerHTML = "❄";
+            snowflake.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; // Different fall speeds
+            snowflake.style.fontSize = Math.random() * 20 + 20 + "px"; // Random size
+            snowflake.style.animationDelay = Math.random() * 5 + "s"; // Different start times
+            snowContainer.appendChild(snowflake);
+        }
+    });
+</script>
+
 </body>
 </html>
