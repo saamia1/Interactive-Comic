@@ -18,7 +18,7 @@ function updatePanel() {
     // Disable "Prev" on the first panel
     prevBtn.disabled = (currentIndex === 0);
 
-    // Hide "Next" and show dialogue box at panel 5
+    // Hide "Next" and show dialogue box at panel 5 (for mainPanels)
     if (currentPanels === mainPanels && currentIndex === 4) {
         nextBtn.style.display = "none";
         dialogueOverlay.style.display = "block"; // Show dialogue box
@@ -33,14 +33,38 @@ function updatePanel() {
     } else {
         prevBtn.onclick = prevPanel;
     }
+
+    // yay sound effect plays if path b is chosen
+    if (currentPanels === pathB && currentIndex === pathB.length - 1) {
+        if (!soundEffectPlayed) {
+            const soundEffect = document.getElementById("sound-effect");
+            if (soundEffect) {
+                soundEffect.play().catch(error => console.error("Sound effect playback error:", error));
+                soundEffectPlayed = true;
+            }
+        }
+    } else {
+        // Reset flag
+        soundEffectPlayed = false;
+    }
 }
 
+
 function nextPanel() {
+    // If on the first panel, background sound plays
+    if (currentIndex === 0) {
+        const audio = document.getElementById("background-music");
+        if (audio) {
+            audio.loop = true; 
+            audio.play().catch(error => console.error("Audio playback error:", error));
+        }
+    }
     if (currentIndex < currentPanels.length - 1) {
         currentIndex++;
         updatePanel();
     }
 }
+
 
 function prevPanel() {
     if (currentIndex > 0) {
