@@ -19,7 +19,7 @@ function updatePanel() {
     prevBtn.disabled = (currentIndex === 0);
 
     // Hide "Next" and show dialogue box at panel 5 (for mainPanels)
-    if (currentPanels === mainPanels && currentIndex === 8) {
+    if (currentPanels === mainPanels && currentIndex === 4) {
         nextBtn.style.display = "none";
         dialogueOverlay.style.display = "block"; // Show dialogue box
     } else {
@@ -34,17 +34,27 @@ function updatePanel() {
         prevBtn.onclick = prevPanel;
     }
 
-    // yay sound effect plays if path b is chosen
+    // Play sound effects based on the chosen path
     if (currentPanels === pathB && currentIndex === pathB.length - 1) {
+        // yay sound effect for path b
         if (!soundEffectPlayed) {
-            const soundEffect = document.getElementById("sound-effect");
+            const soundEffect = document.getElementById("sound-effect1");
+            if (soundEffect) {
+                soundEffect.play().catch(error => console.error("Sound effect playback error:", error));
+                soundEffectPlayed = true;
+            }
+        }
+    } else if (currentPanels === pathA && currentIndex === pathA.length - 1) {
+        // boo sound effect for Path A
+        if (!soundEffectPlayed) {
+            const soundEffect = document.getElementById("sound-effect2");
             if (soundEffect) {
                 soundEffect.play().catch(error => console.error("Sound effect playback error:", error));
                 soundEffectPlayed = true;
             }
         }
     } else {
-        // Reset flag
+        // Reset flag 
         soundEffectPlayed = false;
     }
 }
