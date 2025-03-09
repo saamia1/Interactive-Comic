@@ -18,24 +18,22 @@
     <!-- Comic Panel with Side Navigation -->
     <div class="comic-container">
         <button id="prev-btn" class="left-button" onclick="prevPanel()" disabled>Prev</button>
-        <img id="comic-panel" src="panels/1.PNG" alt="Comic Panel">
+        <img id="comic-panel" src="panels/1a.jpg" alt="Comic Panel">
         <button id="next-btn" class="right-button" onclick="nextPanel()">Next</button>
     </div>
 
     <!-- Dialogue Overlay (Hidden Initially) -->
     <div id="dialogue-overlay" class="dialogue-overlay">
-        <p>What will you do next?</p>
+        <p>What will Tux do now?</p>
         <div class="choice-buttons">
-            <button class="choice-btn" onclick="choosePath('A')">Ignore the baby penguin</button>
-            <button class="choice-btn" onclick="choosePath('B')">Help the baby penguin</button>
+            <button class="choice-btn" onclick="choosePath('A')">Ignore baby pebbles</button>
+            <button class="choice-btn" onclick="choosePath('B')">Help baby pebbles</button>
         </div>
     </div>
 
     <!-- audio -->
     <audio id="background-music" src="audio/snowstorm.mp3" loop autoplay></audio>
     <audio id="sound-effect" src="audio/Yay.mp3"></audio>
-
-
 
     <!-- JavaScript File -->
     <script src="script.js"></script>

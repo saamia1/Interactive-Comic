@@ -1,7 +1,7 @@
 // Define comic panel sequences
-const mainPanels = ["1.PNG", "2.PNG", "3.PNG", "4.PNG", "5.PNG"];
-const pathA = ["6.PNG", "7.PNG", "8.PNG"];
-const pathB = ["62.PNG", "72.PNG"];
+const mainPanels = ["1a.jpg","1b.jpg","1c.jpg", "3a.jpg","3b.jpg", "4a.jpg","4b.jpg", "5a.jpg", "5.PNG"];
+const pathA = ["6.jpg", "7.jpg", "8.jpg"];
+const pathB = ["62.jpg", "72.jpg"];
 
 let currentPanels = mainPanels;
 let currentIndex = 0;
@@ -19,7 +19,7 @@ function updatePanel() {
     prevBtn.disabled = (currentIndex === 0);
 
     // Hide "Next" and show dialogue box at panel 5 (for mainPanels)
-    if (currentPanels === mainPanels && currentIndex === 4) {
+    if (currentPanels === mainPanels && currentIndex === 8) {
         nextBtn.style.display = "none";
         dialogueOverlay.style.display = "block"; // Show dialogue box
     } else {
