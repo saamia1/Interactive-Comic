@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button");
     buttons.forEach(button => {
         button.addEventListener("click", function () {
-            // Get the audio element
+            // Get the audio 
             const clickSound = document.getElementById("button-click");
             if (clickSound) {
                 // Reset the sound if it is already playing
