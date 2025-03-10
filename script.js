@@ -12,6 +12,21 @@ const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const dialogueOverlay = document.getElementById("dialogue-overlay");
 
+document.addEventListener("DOMContentLoaded", function () {
+    const snowContainer = document.querySelector(".snowflakes");
+
+    for (let i = 0; i < 30; i++) { // Adjust number of snowflakes
+        let snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.innerHTML = "❄";
+        snowflake.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; // Different fall speeds
+        snowflake.style.fontSize = Math.random() * 20 + 20 + "px"; // Random size
+        snowflake.style.animationDelay = Math.random() * 5 + "s"; // Different start times
+        snowContainer.appendChild(snowflake);
+    }
+});
+
 function updatePanel() {
     imgElement.src = `panels/${currentPanels[currentIndex]}`;
 
