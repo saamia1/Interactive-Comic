@@ -87,6 +87,7 @@ function nextPanel() {
     if (currentIndex < currentPanels.length - 1) {
         currentIndex++;
         updatePanel();
+        checkLastSlide();
     }
 }
 
@@ -129,3 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function checkLastSlide() {
+    if ((currentPanels === pathA && currentIndex === pathA.length - 1) || 
+        (currentPanels === pathB && currentIndex === pathB.length - 1)) {
+        nextBtn.onclick = returnToHome;
+    }
+}
+
+function returnToHome() {
+    window.location.href = "index.html";
+}
+
