@@ -19,7 +19,7 @@ function updatePanel() {
     prevBtn.disabled = (currentIndex === 0);
 
     // Hide "Next" and show dialogue box at panel 5 (for mainPanels)
-    if (currentPanels === mainPanels && currentIndex === 4) {
+    if (currentPanels === mainPanels && currentIndex === 8) {
         nextBtn.style.display = "none";
         dialogueOverlay.style.display = "block"; // Show dialogue box
     } else {
