@@ -113,3 +113,19 @@ function choosePath(option) {
     currentIndex = 0;
     updatePanel();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    //get all buttons
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Get the audio element
+            const clickSound = document.getElementById("button-click");
+            if (clickSound) {
+                // Reset the sound if it is already playing
+                clickSound.currentTime = 0;
+                clickSound.play().catch(error => console.error("Click sound error:", error));
+            }
+        });
+    });
+});
